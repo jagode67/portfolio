@@ -16,17 +16,19 @@
 
         body {
             font-family: 'Ysabeau Infant', sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+/*            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);*/
+            background: linear-gradient(0deg, #55000000 0%, #550000 100%);
             min-height: 100vh;
             color: #333;
         }
 
         .header {
             text-align: center;
-            padding: 40px 20px;
-            background: rgba(255, 255, 255, 0.1);
+            padding: 20px 20px;
+     /*       background: rgba(255, 255, 255, 0.1);
+            background: #500;
             backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            /*border-bottom: 1px solid rgba(255, 255, 255, 0.2); */
         }
 
         .header h1 {
@@ -39,7 +41,7 @@
         .header p {
             font-size: 1.2rem;
             color: rgba(255, 255, 255, 0.9);
-            max-width: 600px;
+/*            max-width: 600px;*/
             margin: 0 auto;
         }
 
@@ -71,11 +73,11 @@
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
         }
 
-        .project-card:nth-child(1) {
+        .dobleAncho {
             grid-column: span 2;
         }
 
-        .project-card:nth-child(4) {
+        .dobleAlto {
             grid-row: span 2;
         }
 
@@ -95,51 +97,26 @@
             position: relative;
         }
 
-        .project-card:nth-child(1) .project-image {
-            background-image: url('https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');
-        }
-
-        .project-card:nth-child(2) .project-image {
-            background-image: url('https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');
-        }
-
-        .project-card:nth-child(3) .project-image {
-            background-image: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');
-        }
-
-        .project-card:nth-child(4) .project-image {
-            background-image: url('https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');
-            height: 300px;
-        }
-
-        .project-card:nth-child(5) .project-image {
-            background-image: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');
-        }
-
-        .project-card:nth-child(6) .project-image {
-            background-image: url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');
-        }
-
         .project-content {
             padding: 20px;
         }
 
         .project-title {
-            font-size: 1.4rem;
+            font-size: 22px;
             font-weight: bold;
             margin-bottom: 10px;
             color: #333;
         }
 
         .project-description {
-            font-size: 0.9rem;
+            font-size: 20px;
             line-height: 1.5;
             color: #666;
-            display: -webkit-box;
+  /*          display: -webkit-box;
             -webkit-line-clamp: 2;
             line-clamp: 2;
             -webkit-box-orient: vertical;
-            overflow: hidden;
+            overflow: hidden; */
         }
 
         @media (max-width: 768px) {
@@ -169,72 +146,70 @@
 <body>
     <header class="header">
         <h1>Javi</h1>
-        <p>Desarrollador creativo apasionado por crear experiencias digitales únicas y funcionales</p>
+        <p>Desarrollador y formador apasionado por crear y enseñar experiencias digitales únicas y funcionales</p>
     </header>
-
+<!--https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80-->
     <div class="container">
         <div class="bento-grid">
-            <div class="project-card" onclick="openProject('proyecto-web-app')">
-                <div class="project-image">
+            <div class="project-card dobleAncho" onclick="window.location.href = ''">
+                <div class="project-image" style="background-image: url('.//img//masesic.png');">
                 </div>
                 <div class="project-content">
-                    <h3 class="project-title">Aplicación Web Moderna</h3>
-                    <p class="project-description">Una aplicación web responsive desarrollada con las últimas tecnologías. Interfaz intuitiva y experiencia de usuario optimizada para todos los dispositivos.</p>
+                    <h3 class="project-title">MasEsic</h3>
+                    <p class="project-description">Aplicación PWA que permite a los estudiantes registrarse en las actividades de la Fundación y reciben notificaciones sobre ellas.</p>
                 </div>
             </div>
 
-            <div class="project-card" onclick="openProject('proyecto-ecommerce')">
-                <div class="project-image">
+            <div class="project-card dobleAlto" onclick="window.location.href = ''">
+                <div class="project-image" style="background-image: url('.//img//sot.png');height: 550px;">
                 </div>
                 <div class="project-content">
-                    <h3 class="project-title">Tienda Online</h3>
-                    <p class="project-description">Plataforma de comercio electrónico completa con sistema de pagos integrado. Gestión de inventario y panel de administración.</p>
+                    <h3 class="project-title">SOT</h3>
+                    <p class="project-description">Plataforma que permite mostrar a los estudiantes como se puede crear una web paso a paso.</p>
                 </div>
             </div>
 
-            <div class="project-card" onclick="openProject('proyecto-dashboard')">
-                <div class="project-image">
+            <div class="project-card" onclick="window.location.href = ''">
+                <div class="project-image" style="background-image: url('.//img//challenge.png');">
                 </div>
                 <div class="project-content">
-                    <h3 class="project-title">Panel de Control</h3>
-                    <p class="project-description">Dashboard interactivo para análisis de datos en tiempo real. Visualizaciones dinámicas y reportes personalizables.</p>
+                    <h3 class="project-title">Challenge</h3>
+                    <p class="project-description">Plataforma de retos de programación donde los estudiantes pueden mejorar sus habilidades a través de desafíos.</p>
                 </div>
             </div>
 
-            <div class="project-card" onclick="openProject('proyecto-mobile')">
-                <div class="project-image">
+            <div class="project-card" onclick="window.location.href = ''">
+                <div class="project-image" style="background-image: url('.//img//ffe.png');">
                 </div>
                 <div class="project-content">
-                    <h3 class="project-title">App Mobile</h3>
-                    <p class="project-description">Aplicación móvil nativa con funcionalidades avanzadas. Diseño centrado en el usuario y rendimiento optimizado.</p>
+                    <h3 class="project-title">FFE</h3>
+                    <p class="project-description">Gestión para la creación de los anexos oficiales</p>
                 </div>
             </div>
 
-            <div class="project-card" onclick="openProject('proyecto-portfolio')">
-                <div class="project-image">
+            <div class="project-card" onclick="window.location.href = ''">
+                <div class="project-image" style="background-image: url('.//img//terra.png');">
                 </div>
                 <div class="project-content">
-                    <h3 class="project-title">Portfolio Creativo</h3>
-                    <p class="project-description">Sitio web portfolio con animaciones y transiciones suaves. Showcase de trabajos con galería interactiva.</p>
+                    <h3 class="project-title">Terra</h3>
+                    <p class="project-description">Mi primer gran proyecto de desarrollo web.</p>
                 </div>
             </div>
 
-            <div class="project-card" onclick="openProject('proyecto-api')">
-                <div class="project-image">
+            <div class="project-card" onclick="window.location.href = ''">
+                <div class="project-image" style="background-image: url('.//img//telco.png');">
                 </div>
                 <div class="project-content">
-                    <h3 class="project-title">API RESTful</h3>
-                    <p class="project-description">API robusta y escalable para aplicaciones web. Documentación completa y sistema de autenticación seguro.</p>
+                    <h3 class="project-title">TELCO 3.0</h3>
+                    <p class="project-description">Gran proyecto de transformación tecnológica de Telefónica, centrado en la modernización de sus sistemas y procesos.</p>
                 </div>
             </div>
+
         </div>
     </div>
 
     <script>
-        function openProject(projectName) {
-            // Redirige a la página específica del proyecto
-            window.location.href = projectName + '.html';
-        }
+
     </script>
 </body>
 </html>
