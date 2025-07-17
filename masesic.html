@@ -104,11 +104,29 @@
             font-weight: bold;
             font-size: 1.2rem;
         }
+        .github-link {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            padding: 12px 25px;
+            border-radius: 25px;
+            font-weight: 600;
+            margin-bottom: 25px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+        }
 
+        .github-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+            text-decoration: none;
+            color: white;
+        }
         .back-button {
             position: fixed;
-            top: 30px;
-            left: 30px;
+            top: 10px;
+            left: 10px;
             background: rgba(255, 255, 255, 0.9);
             border: none;
             border-radius: 50px;
@@ -166,7 +184,7 @@
 </head>
 <body>
     
-
+<button class="back-button" onclick="window.history.back()">← Volver al Portfolio</button>
     <div class="container">
         <div class="video-section">
             <div class="video-container">
@@ -178,6 +196,10 @@
         </div>
 
         <div class="content-section">
+                    <div class="content-section">
+                        <a href="https://github.com/jagode67/masesic" target="_blank" class="github-link">
+                🔗 Ver código en GitHub
+            </a>
             <h1 class="project-title">MasEsic</h1>
             
             <div class="project-description">
@@ -196,7 +218,7 @@
                 <li>Sistema de recordatorios automáticos</li>
                 <li>Funcionalidad offline para acceso sin conexión</li>
             </ul>
-            <button class="back-button" onclick="window.history.back()">← Volver al Portfolio</button>
+            
         </div>
     </div>
 </body>
